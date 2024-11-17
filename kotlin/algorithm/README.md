@@ -24,7 +24,7 @@ This repository is specific about Algorithm Techniques and Evolutions
 ### 🔧 BigO - Chart
 
 <p align="center">
-  ~~~~<img src= "https://github.com/CarlosRobertoMedeiros/posigti/blob/main/flow-principal/fluxo-principal.png"  alt="http://bigocheatsheet.com/"/>
+  <img src= "https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/img/Big-O-Complexity-Chart.png"  alt="http://bigocheatsheet.com/"/>
 </p>
 
 ### 🔧 Topics
@@ -33,12 +33,12 @@ This repository is specific about Algorithm Techniques and Evolutions
 | Subject                      | Link                                                                                                                                                                                   |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 01-Big O                     |                                                                                                                                                                                        |
-| 01.1-Big O Constant Time     | [Big O Constant Time](https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/src/main/kotlin/br/com/roberto/algorithm/bigO/BigOSampleOne002.kt)    | 
-| 01.2-Big O Linear Time       | [Big O Linear Time](https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/src/main/kotlin/br/com/roberto/algorithm/bigO/BigOSampleOne003.kt)      |
+| 01.1-Big O Constant Time     | [Big O Constant Time](https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/src/main/kotlin/br/com/roberto/algorithm/bigO/BigOSampleOne001.kt)    | 
+| 01.2-Big O Linear Time       | [Big O Linear Time](https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/src/main/kotlin/br/com/roberto/algorithm/bigO/BigOSampleOne002.kt)      |
 | 01.3-Big O Logarithm Time    | [Big O Logarithm Time](https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/src/main/kotlin/br/com/roberto/algorithm/bigO/BigOSampleOne003.kt)   |
-| 01.4-Big O Quadratic Time    | [Big O Quadratic Time](https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/src/main/kotlin/br/com/roberto/algorithm/bigO/BigOSampleOne003.kt)   |
-| 01.5-Big O Exponential Time  | [Big O Exponential Time](https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/src/main/kotlin/br/com/roberto/algorithm/bigO/BigOSampleOne003.kt) |
-| 01.6-Big O Fatorial Time     | [Big O Fatorial Time](https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/src/main/kotlin/br/com/roberto/algorithm/bigO/BigOSampleOne003.kt)    |
+| 01.4-Big O Quadratic Time    | [Big O Quadratic Time](https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/src/main/kotlin/br/com/roberto/algorithm/bigO/BigOSampleOne004.kt)   |
+| 01.5-Big O Exponential Time  | [Big O Exponential Time](https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/src/main/kotlin/br/com/roberto/algorithm/bigO/BigOSampleOne005.kt) |
+| 01.6-Big O Fatorial Time     | [Big O Fatorial Time](https://github.com/CarlosRobertoMedeiros/repo-algorithm-generic/blob/main/kotlin/algorithm/src/main/kotlin/br/com/roberto/algorithm/bigO/BigOSampleOne006.kt)    |
 
 
 ## 📌 Semantic Version Control
