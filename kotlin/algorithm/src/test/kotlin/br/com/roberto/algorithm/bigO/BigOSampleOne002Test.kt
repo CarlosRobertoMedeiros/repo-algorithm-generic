@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
+import java.io.ByteArrayOutputStream
+import java.io.PrintStream
 
 
 class BigOSampleOne002Test {
@@ -12,28 +14,45 @@ class BigOSampleOne002Test {
 
     @BeforeEach
     fun setup(){
-        bigOSampleOne002 =  BigOSampleOne002()
+        bigOSampleOne002 = BigOSampleOne002()
     }
 
     @Test
-    @DisplayName("should print the hello world message")
-    fun `should print the message`(){
-        val message =  bigOSampleOne002.printMessage("Hello World")
-        Assertions.assertEquals("Hello World",message)
+    @DisplayName("should print the items")
+    fun `should print the items`(){
+        val outputStrem = ByteArrayOutputStream()
+        System.setOut(PrintStream(outputStrem))
+
+        val numbers = arrayOf(1,2,3,4,5,6,7,8,9,10)
+        bigOSampleOne002.printItens(numbers)
+
+        Assertions.assertEquals("12345678910", outputStrem.toString().trim())
+        System.setOut(System.out)
     }
 
     @Test
-    @DisplayName("should return the values informed")
-    fun `should return the values informed`(){
-        val value =  bigOSampleOne002.returnValue(10)
-        Assertions.assertEquals(10,value)
+    @DisplayName("should return max value")
+    fun `should return max value`(){
+        val numbers = arrayOf(1,2,3,4,5,6,7,8,9,10)
+        val max = bigOSampleOne002.findMax(numbers)
+        Assertions.assertEquals(10, max)
     }
 
     @Test
-    @DisplayName("should return the first position")
+    @DisplayName("should garantee max value")
+    fun `should garantee max value`(){
+        val numbers = arrayOf(1,2,3,10,4,5)
+        val max = bigOSampleOne002.findMax(numbers)
+        Assertions.assertEquals(10, max)
+    }
+
+
+
+    @Test
+    @DisplayName("should correct the sum values")
     fun `should correct the sum values`(){
         val numbers = arrayOf(1,2,3,4,5,6,7,8,9,10)
-        val firstPositionValue =  bigOSampleOne002.returnArrayPosition(numbers)
-        Assertions.assertEquals(1,firstPositionValue)
+        val sumValues =  bigOSampleOne002.findSum(numbers)
+        Assertions.assertEquals(55,sumValues)
     }
 }

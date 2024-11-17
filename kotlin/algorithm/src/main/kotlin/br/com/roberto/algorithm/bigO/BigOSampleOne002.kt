@@ -3,24 +3,36 @@ package br.com.roberto.algorithm.bigO
 class BigOSampleOne002 {
 
     /*
-    * Big (O) - TEMPO CONSTANTE - O (1)
+    * Big (O) - TEMPO LINEAR - O (n)
     *
-    * Quando o algoritmo executará sempre no mesmo tempo
-    * Independente da quantidade de dados que receber
+    * Quando o tempo do algoritmo é dependente do valor de n
+    * Sendo que n são os dados de entrada
     *
+    * A medida que a quantidade de números cresce no "numbers"
+    * o tempo do seu algoritmo aumenta
     */
-    fun printMessage(message: String) : String {
-        print(message)
-        return message
+
+    fun printItens(numbers : Array<Int>): Unit {
+        for (number in numbers){
+            print(number)
+        }
     }
 
-    fun returnValue(value: Int): Int {
-        return value
+
+    fun findMax(numbers: Array<Int>): Int {
+        var max = 0
+        for (number in numbers){
+            if (number > max) max = number
+        }
+        return max
     }
 
-    fun returnArrayPosition(number : Array<Int>) : Int {
-        return number[0]
+    fun findSum(numbers: Array<Int>) :Int{
+        var sum = 0
+        for (number in numbers){
+            sum +=number
+        }
+        return sum
     }
-
 
 }

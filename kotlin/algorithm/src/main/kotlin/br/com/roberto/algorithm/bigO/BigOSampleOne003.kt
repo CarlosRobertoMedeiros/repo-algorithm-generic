@@ -3,12 +3,27 @@ package br.com.roberto.algorithm.bigO
 class BigOSampleOne003 {
 
     /*
-    * Big (O) - TEMPO LINEAR - O (n)
+    * Big (O) - TEMPO LOGARÍTMICO - O (log n)
     *
-    * Quando o tempo do algoritmo é dependente do valor de n
-    * Sendo que n são os dados de entrada
+    * Quando o algoritmo REDUZ o tamanho
+    * dos dados de entrada a cada iteração
+    *
+    * Exemplo muito aplicado em árvore binária
     */
-   //Todo: Continuar Daqui video aula tempo linear
-   // https://plataforma.universodev.com.br/conteudo/trilha/big-(o)/aula/1
+    fun binarySearchNumber(numbers : IntArray, target: Int): Int {
+        val numbersSorted = numbers.sortedArray()
 
+        var left = 0
+        var right = numbersSorted.size -1
+
+        while (left <= right){
+            val mid = left + (right - left) / 2
+            when {
+                numbersSorted[mid] == target -> return mid
+                numbersSorted[mid] < target -> left = mid + 1
+                else -> right = mid -1
+            }
+        }
+        return -1 // Elemento nao Encontrado
+    }
 }
