@@ -33,4 +33,29 @@ class BigOSampleOne003Test {
 
         Assertions.assertEquals(-1, returnValue)
     }
+
+    @Test
+    @DisplayName("should return the position where find the target value")
+    fun `should print the target value in String`(){
+        val text = arrayOf(
+            "Zebra", "Apple", "Monkey", "Sun", "Moon", "Ocean", "Laptop", "Bottle", "Clock", "Desk", "Elephant", "Giraffe",
+            "Banana", "Orange", "Pineapple", "Strawberry", "Chocolate", "Rain", "Thunder", "Snow", "Fire", "Water", "Mountain",
+            "River", "Forest", "Jungle", "Sky", "Cloud", "Rainbow", "Comet", "Galaxy", "Star", "Planet", "Asteroid", "Rocket",
+            "Satellite", "Camera", "Picture", "Memory", "Dream", "Hope", "Future", "Past", "History", "Science", "Math", "Physics",
+            "Chemistry", "Biology", "Energy", "Atom", "Molecule", "Cell", "Virus", "Bacteria", "Medicine", "Doctor", "Nurse",
+            "Hospital", "Ambulance", "Police", "Firefighter", "Rescue", "Survivor", "Hero", "Villain", "Story", "Adventure",
+            "Mystery", "Detective", "Crime", "Justice", "Law", "Judge", "Court", "Prison", "Escape", "Journey", "Travel", "Vacation",
+            "Holiday", "Beach", "Resort", "Island", "Boat", "Ship", "Submarine", "Diver", "Fish", "Shark", "Whale", "Dolphin",
+            "Seagull", "Eagle", "Falcon", "Owl", "Wolf", "Tiger", "Lion", "Panther", "Cheetah", "Leopard", "Bear", "Fox",
+            "Squirrel", "Rabbit", "Deer", "Horse", "Donkey", "Cow", "Sheep", "Goat", "Pig", "Chicken", "Duck", "Goose", "Pigeon",
+            "Parrot", "Penguin", "Kangaroo", "Koala", "Crocodile", "Alligator", "Turtle", "Snake", "Lizard", "Frog", "Insect",
+            "Butterfly", "Bee", "Ant", "Spider", "Scorpion", "Dragonfly", "Caterpillar"
+        )
+
+        val target = "Dolphin"
+        val (index, iterations) = bigOSampleOne003.binarySearchText(text, target)
+
+        Assertions.assertEquals(35, index)
+        Assertions.assertTrue(iterations in 1..8)
+    }
 }
