@@ -10,7 +10,7 @@ class BigOSampleOne001 {
     *
     */
     fun printMessage(message: String) : String {
-        print(message)
+        //print(message)
         return message
     }
 

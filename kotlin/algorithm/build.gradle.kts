@@ -29,7 +29,7 @@ dependencies {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
 	testImplementation("org.mockito.kotlin:mockito-kotlin:3.2.0")
-	testImplementation("io.mockk:mockk:1.13.5")
+	testImplementation("io.mockk:mockk:1.13.8")
 	testImplementation("com.ninja-squad:springmockk:4.0.2")
 
 
