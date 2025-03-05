@@ -32,18 +32,18 @@ class Exercise1Test{
             "Alice", "Breno", "Cintia", "Diego", "Edson", "Felipe", "Gabriela", "Heitor",
             "Ilana", "Jorge", "Kelly", "Lucas", "Mônica", "Nicolas", "Otávia", "Pedro",
             "Raquel", "Silvio", "Tânia", "Vinícius", "Wesley", "Xenia", "Yara", "Zacarias",
-            "Arthur", "Bernardo", "Clarice", "Dorival", "Elisa", "Fernando", "Giovanni"
+            "Arthur", "Bernardo", "Clarice", "Dorival", "Elisa", "Fernando", "Giovanni","Humberto"
         )
         val target = "Zuleide"
         val (returnValue, iteractions) = exercise1.binarySearch(namesList.sortedArray(), target)
 
-        assertEquals(126, returnValue)
-        assertEquals(7, iteractions)
+        assertEquals(127, returnValue) // Zuleide está na posição 127 do array após ordenado
+        assertEquals(8, iteractions) // Esperado 8 iterações, conforme explicado, excedeu devido a última pesquisa
     }
 
     @Test
     @DisplayName("should return the position where find the target text with 256 names")
-    fun `should print the target value with 255 names dont forget -1`(){
+    fun `should print the target value with 256 names dont forget -1`(){
         val namesList = arrayOf(
             "Ana", "Bruno", "Carlos", "Daniela", "Eduardo", "Fernanda", "Gabriel", "Helena", "Igor", "Juliana",
             "Kleber", "Larissa", "Marcos", "Natália", "Otávio", "Priscila", "Rafael", "Sabrina", "Tiago", "Vanessa",
@@ -66,12 +66,12 @@ class Exercise1Test{
             "Zacarias", "Arthur", "Bruna", "Cesar", "Davi", "Eliana", "Fernando", "Gustavo", "Helena", "Irene",
             "Jonas", "Karina", "Lúcio", "Mauro", "Nicolau", "Otávio", "Pablo", "Ricardo", "Sérgio", "Tais",
             "Valeria", "Wesley", "Xuxa", "Yago", "Zelda", "Adriana", "Breno", "Cíntia", "Diego", "Eliane",
-            "Fabio", "Gilson", "Hugo", "Iara", "Janaina", "Kelly", "Leandro", "Marcio", "Nathalia"
+            "Fabio", "Gilson", "Hugo", "Iara", "Janaina", "Kelly", "Leandro", "Marcio", "Nathalia", "Otávio"
         )
         val target = "Amanda"
         val (returnValue, iteractions) = exercise1.binarySearch(namesList.sortedArray(), target)
 
-        assertEquals(4, returnValue)
-        assertEquals(8, iteractions)
+        assertEquals(4, returnValue) // Amanda está na posição 4 do array após ordenado
+        assertEquals(8, iteractions) // Esperado 8 iterações, conforme explicado, não excedeu devido a última pesquisa
     }
 }
