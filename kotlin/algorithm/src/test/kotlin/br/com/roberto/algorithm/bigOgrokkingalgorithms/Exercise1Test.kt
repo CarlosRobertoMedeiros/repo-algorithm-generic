@@ -15,7 +15,7 @@ class Exercise1Test{
 
     @Test
     @DisplayName("should return the position where find the target text with 128 names")
-    fun `should print the target value with 127 names`(){
+    fun `should print the target value with 128 names`(){
         val namesList = arrayOf(
             "Ana", "Bruno", "Carlos", "Daniela", "Eduardo", "Fernanda", "Gabriel", "Helena",
             "Igor", "Juliana", "Kleber", "Larissa", "Marcos", "Natália", "Otávio", "Priscila",
