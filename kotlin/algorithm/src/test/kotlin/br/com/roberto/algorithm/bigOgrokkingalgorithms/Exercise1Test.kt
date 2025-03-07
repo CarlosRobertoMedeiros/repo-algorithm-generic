@@ -13,6 +13,9 @@ class Exercise1Test{
         exercise1 = Exercise1()
     }
 
+    /**
+     * Exemplo de aplicação do exercício 1
+     */
     @Test
     @DisplayName("should return the position where find the target text with 128 names")
     fun `should print the target value with 128 names`(){
@@ -41,6 +44,9 @@ class Exercise1Test{
         assertEquals(8, iteractions) // Esperado 8 iterações, conforme explicado, excedeu devido a última pesquisa
     }
 
+    /**
+     * Exemplo de aplicação do exercício 2
+     */
     @Test
     @DisplayName("should return the position where find the target text with 256 names")
     fun `should print the target value with 256 names`(){
