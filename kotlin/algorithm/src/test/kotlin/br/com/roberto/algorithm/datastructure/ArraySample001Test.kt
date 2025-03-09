@@ -1,6 +1,5 @@
 package br.com.roberto.algorithm.datastructure
 
-import io.mockk.InternalPlatformDsl.toArray
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
@@ -96,7 +95,95 @@ class ArraySample001Test {
         assertEquals(1,1)
     }
 
-    //Continuar a partir dos 11:30
-    //https://plataforma.universodev.com.br/conteudo/trilha/estruturas-de-dados/aula/1
+    @Test
+    @DisplayName("should return the min value in array")
+    fun `should return the min value in array`() {
+        val result = arraySample001.myMumbers().min()
+        assertEquals(result,1)
+    }
 
+    @Test
+    @DisplayName("should return the max value in array")
+    fun `should return the max value in array`() {
+        val result = arraySample001.myMumbers().max()
+        assertEquals(result,5)
+    }
+
+    @Test
+    @DisplayName("should create a Array in 100 positions")
+    fun `should create a Array in 100 positions`() {
+        val myArray = (1..100).toList().toTypedArray()
+        println(myArray)
+        assertEquals(myArray.size,100)
+    }
+
+    @Test
+    @DisplayName("should create a two dimensions Array")
+    fun `should create a two dimensions Array`() {
+        val twoDimensionsArray = arrayOf(
+            arrayOf(123,456),
+            arrayOf(789,321),
+        )
+        assertEquals(twoDimensionsArray[0][1],456)
+        assertEquals(twoDimensionsArray[1][0],789)
+    }
+
+    @Test
+    @DisplayName("should create a shallow copy array")
+    fun `should create a shallow copy array`() {
+        /*
+            cópia rasa significa que a estrutura do array é copiada, mas os objetos internos são COMPARTILHADOS.
+            Se modificarmos um objeto dentro do array copiado, o original também será afetado.
+         */
+        val originalArray = arrayOf(
+            arrayOf(1, 2),
+            arrayOf(3, 4)
+        )
+
+        // Criando uma cópia rasa (shallow copy)
+        val shallowCopy = originalArray.copyOf()
+
+        // Modificando o valor na cópia
+        shallowCopy[0][0] = 99
+
+        // Exibindo ambos os arrays
+        assertEquals(originalArray[0][0],99)
+        assertEquals(shallowCopy[0][0],99)
+    }
+
+    @Test
+    @DisplayName("should create a deep copy array")
+    fun `should create a deep copy array`() {
+        /*
+            A cópia profunda significa que uma nova estrutura é criada, e os objetos internos também são clonados.
+            Alterações no array copiado NÃO AFETAM o original.
+         */
+        val originalArray = arrayOf(
+            arrayOf(1, 2),
+            arrayOf(3, 4)
+        )
+
+        // Criando uma cópia rasa (shallow copy)
+        val deepCopy = originalArray.map { it.copyOf() }.toTypedArray()
+
+        // Modificando o valor na cópia
+        deepCopy[0][0] = 99
+
+        // Exibindo ambos os arrays
+        assertEquals(originalArray[0][0],1)
+        assertEquals(deepCopy[0][0],99)
+    }
+
+    @Test
+    @DisplayName("should return array values without temp variables")
+    fun `should return array values without temp variables`() {
+        val numbers = arrayOf(1,2,3,4,5)
+        numbers[1] = numbers[2].also { numbers[2] = numbers[1] }
+
+        assertEquals(1, numbers[0])
+        assertEquals(3, numbers[1])
+        assertEquals(2, numbers[2])
+        assertEquals(4, numbers[3])
+        assertEquals(5, numbers[4])
+    }
 }
